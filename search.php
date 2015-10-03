@@ -7,6 +7,7 @@
 	
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    //Something Posted
+   //Further comments added to the head to test git hub
 
 }
 
@@ -31,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<div id="header">
 		<ul id="simple-menu">
 			<li><a href="index.php" title="Manual Library">Manual Library</a></li>
-			<li><a href="manualupload.php" title="Manuals">Manual Upload</a></li>
 			<li><a href="notes.php" title="Add Note">Add Note</a></li>
             <li><a href="search.php" title="Search" class="current">Search</a></li>
 		</ul>
@@ -61,6 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					$term = strtoupper($term);
 					$term = strip_tags($term);
 					$term = trim($term);
+					
+					//aLSO INlcues
 			
 					$result = mysql_query("SELECT * FROM Manuals WHERE ((Manufacturer LIKE '%". $term ."%') OR
 														 (ModelNo LIKE '%". $term ."%'))
